@@ -63,7 +63,7 @@
 ;; http://www.emacswiki.org/emacs/CommentingCode
 
 
-;; (setq confirm-kill-emacs
+(setq confirm-kill-emacs 'y-or-n-p)
 
 
 (setq inferior-lisp-program "/usr/bin/clisp")
