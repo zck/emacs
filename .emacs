@@ -64,6 +64,8 @@
 
 
 (setq confirm-kill-emacs 'y-or-n-p)
+;; yell at me before going away
+;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Exiting.html
 
 
 (setq inferior-lisp-program "/usr/bin/clisp")
