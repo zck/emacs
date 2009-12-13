@@ -1,7 +1,7 @@
 (show-paren-mode 1)
-(set-face-background 'show-paren-match-face "#c8f8f0")
+(set-face-background 'show-paren-match-face "#c0f8ff")
 ;; Highlight the parenthesis at point and its match.
-;; Use the color #c8f8f0 instead of the default -- it's lighter
+;; Use the color #c8f8ff instead of the default -- it's lighter
 ;; http://www.emacswiki.org/emacs/ShowParenMode
 
 (setq show-paren-style 'expression)
@@ -14,23 +14,23 @@
 
 (menu-bar-mode -1)
 ;; who needs 'em?
-;; from http://www.emacswiki.org/emacs/ToolBar
+;; http://www.emacswiki.org/emacs/ToolBar
 
 (set-scroll-bar-mode 'right)
 ;; http://www.emacswiki.org/emacs/ScrollBar
 
 (mouse-avoidance-mode 'exile)
 ;; move the mouse pointer to the corner of the screen when approached
-;; from http://www.emacswiki.org/emacs/MouseAvoidance
+;; http://www.emacswiki.org/emacs/MouseAvoidance
 
 (require 'ido)
 (ido-mode t)
 ;; turn ido-mode on
-;; from http://www.emacswiki.org/emacs/InteractivelyDoThings
+;; http://www.emacswiki.org/emacs/InteractivelyDoThings
 
 (add-to-list 'auto-mode-alist '("\\.arc\\'" . lisp-mode))
 ;; make .arc files open in lisp-mode
-;; from http://www.emacswiki.org/emacs/AutoModeAlist
+;; http://www.emacswiki.org/emacs/AutoModeAlist
 
 (when (string-match "linux" system-configuration)
   (setq x-select-enable-clipboard t))
@@ -48,20 +48,16 @@
 ;; http://www.gnu.org/software/emacs/elisp/html_node/Frame-Titles.html
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-;; you can tell what this is, hopefully
 ;; http://www.emacswiki.org/emacs/DeletingWhitespace
 
 (setq truncate-partial-width-windows nil)
-;; don't truncate lines of text when multiple windows
+;; don't truncate lines of text when multiple windows; wrap them instead
 ;; http://www.emacswiki.org/emacs/TruncateLines
 
 ;; about binding keys: http://www.gnu.org/software/emacs/manual/html_node/emacs/Init-Rebinding.html#Init-Rebinding
 
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
-
-;; bind C-; to comment-or-uncomment-region
 ;; http://www.emacswiki.org/emacs/CommentingCode
-
 
 (setq confirm-kill-emacs 'y-or-n-p)
 ;; yell at me before going away
