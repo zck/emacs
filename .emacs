@@ -59,6 +59,13 @@
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 ;; http://www.emacswiki.org/emacs/CommentingCode
 
+(global-set-key (kbd "C-.") 'other-window)
+(global-set-key (kbd "C-,") 'prev-window)
+
+(defun prev-window ()
+  (interactive)
+  (other-window -1))
+
 (setq confirm-kill-emacs 'y-or-n-p)
 ;; yell at me before going away
 ;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Exiting.html
@@ -68,3 +75,4 @@
 (add-to-list 'load-path "~/.emacs.d/slime/")
 (require 'slime)
 (slime-setup)
+;; Can this be contingent on actually having clisp and slime?
