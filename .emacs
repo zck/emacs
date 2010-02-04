@@ -1,8 +1,14 @@
 (show-paren-mode 1)
-(set-face-background 'show-paren-match-face "#c0f8ff")
 ;; Highlight the parenthesis at point and its match.
-;; Use the color #c8f8ff instead of the default -- it's lighter
 ;; http://www.emacswiki.org/emacs/ShowParenMode
+
+(set-face-background 'show-paren-match-face "#c0f8ff")
+(set-face-background 'show-paren-mismatch-face "#ff5050")
+(set-face-foreground 'show-paren-mismatch-face "#ffffff")
+(set-face-attribute 'show-paren-mismatch-face nil
+                    :weight 'bold)
+;; change colors/fonts
+;;http://emacs-fu.blogspot.com/2009/01/balancing-your-parentheses.html
 
 (setq show-paren-style 'expression)
 ;; Highlight the entire expression
@@ -76,3 +82,12 @@
 (require 'slime)
 (slime-setup)
 ;; Can this be contingent on actually having clisp and slime?
+;; possibly by autoload instead of require?
+
+(setq inhibit-startup-message t)
+
+(setq default-indicate-empty-lines t)
+;; http://www.emacswiki.org/emacs/TheFringe
+
+;; (setq tab-width 2)
+;; (setq c-basic-offset 4)
