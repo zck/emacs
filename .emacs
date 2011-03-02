@@ -2,9 +2,9 @@
 ;; Highlight the parenthesis at point and its match.
 ;; http://www.emacswiki.org/emacs/ShowParenMode
 
-(set-face-background 'show-paren-match-face "#c0f8ff")
-(set-face-background 'show-paren-mismatch-face "#ff5050")
-(set-face-foreground 'show-paren-mismatch-face "#ffffff")
+(set-face-background 'show-paren-match-face "#C0FFFF")
+(set-face-background 'show-paren-mismatch-face "#FF4040")
+(set-face-foreground 'show-paren-mismatch-face "#FFFFFF")
 (set-face-attribute 'show-paren-mismatch-face nil
                     :weight 'bold)
 ;; change colors/fonts
@@ -77,10 +77,10 @@
 ;; http://www.gnu.org/software/emacs/manual/html_node/emacs/Exiting.html
 
 
-(setq inferior-lisp-program "/usr/bin/clisp")
-(add-to-list 'load-path "~/.emacs.d/slime/")
-(require 'slime)
-(slime-setup)
+;; (setq inferior-lisp-program "/usr/bin/clisp")
+;; (add-to-list 'load-path "~/.emacs.d/slime/")
+;; (require 'slime)
+;; (slime-setup)
 ;; Can this be contingent on actually having clisp and slime?
 ;; possibly by autoload instead of require?
 
@@ -91,3 +91,7 @@
 
 ;; (setq tab-width 2)
 ;; (setq c-basic-offset 4)
+
+(setq indent-tabs-mode nil)
+;; Use spaces instead of tabs to indent
+;; http://www.jwz.org/doc/tabs-vs-spaces.html
